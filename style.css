@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+/* start/ screen size 1 */
+.wrapper .left,
+.wrapper .right {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.razval {
+  background-color: #0f0f0f;
+}
+.custom {
+  background-image: white;
+}
+
+.wrapper .buttton {
+  font-size: 52px;
+  position: relative;
+  z-index: 10;
+}
+
+.wrapper .left .buttton {
+  color: white;
+}
+.wrapper .right .buttton {
+  color: black;
+}
+
+/* .wrapper .side::before {
+  background: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  content: '';
+  display: block;
+} */
+/* end/ screen size 1 */
+
+/* start/ screen size 2 */
+@media screen and (min-width: 1000px) {
+  .wrapper {
+    display: flex;
+  }
+
+  .wrapper .left,
+  .wrapper .right {
+    width: 50%;
+    height: 100vh;
+  }
+
+  .wrapper .buttton {
+    font-size: 6.5vh;
+  }
+}
+
+/* end/ screen size 2 */
