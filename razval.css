@@ -3,11 +3,44 @@
   padding: 0;
   font-size: 32px;
   color: azure;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 .bg {
-  background-image: url('imgs/razval/norilsk1.jpg');
+  background-image: url('imgs/razval/BG/bg_test_v002.png');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
+
+.bg-header {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 80px;
+}
+.header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .ggg {
+  min-height: 100vh;
+  z-index: -2;
+  background-image: url('imgs/razval/BG/bg_test_v002.png');
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+}
+.hhh {
+  position: relative;
+  top: -400px;
+  background-color: (0, 0, 0, 0.1);
+  width: 100%;
+  height: 200px;
+  backdrop-filter: blur(10px);
+} */
