@@ -1,8 +1,15 @@
+@font-face {
+  font-family: Canterbury;
+  src: url('./fonts/Canterbury.ttf');
+}
+
 * {
+  font-family: Canterbury;
+  font-weight: initial;
+  font-size: 34px;
+  color: rgb(235, 233, 228);
   margin: 0;
   padding: 0;
-  font-size: 32px;
-  color: azure;
   text-decoration: none;
   list-style-type: none;
 }
@@ -15,32 +22,17 @@
 }
 
 .bg-header {
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(11px);
   z-index: -1;
   position: absolute;
   width: 100%;
-  height: 80px;
+  height: 62px;
 }
 .header {
-  padding: 30px;
+  padding-top: 12px;
+  padding-left: 70px;
+  padding-right: 70px;
   display: flex;
   justify-content: space-between;
 }
-
-/* .ggg {
-  min-height: 100vh;
-  z-index: -2;
-  background-image: url('imgs/razval/BG/bg_test_v002.png');
-  background-size: cover;
-  background-position: center;
-  align-items: center;
-}
-.hhh {
-  position: relative;
-  top: -400px;
-  background-color: (0, 0, 0, 0.1);
-  width: 100%;
-  height: 200px;
-  backdrop-filter: blur(10px);
-} */
