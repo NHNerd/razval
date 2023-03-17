@@ -1,0 +1,23 @@
+{
+  "name": "market",
+  "description": "simple clothes market",
+  "version": "0.0.1",
+  "main": "razvalCard.js",
+  "scripts": {
+    "start": "node razvalCard.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NHNerd/razval.git"
+  },
+  "author": "NHGeek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NHNerd/razval/issues"
+  },
+  "homepage": "https://github.com/NHNerd/razval#readme",
+  "dependencies": {
+    "@types/node": "^18.15.1",
+    "express": "^4.18.2"
+  }
+}

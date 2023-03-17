@@ -4,9 +4,10 @@
 }
 
 * {
+  overflow-x: hidden;
   font-family: Canterbury;
   font-weight: initial;
-  font-size: 34px;
+  font-size: 32px;
   color: rgb(235, 233, 228);
   margin: 0;
   padding: 0;
@@ -35,4 +36,22 @@
   padding-right: 70px;
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+.container {
+  background-color: rgba(1, 1, 1, 0.7);
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardName {
+  position: relative;
+  text-align: center;
+
+  font-size: 21px;
 }
