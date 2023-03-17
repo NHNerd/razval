@@ -1,2 +1,12 @@
-./imgs
-./fonts
+.json
+.png
+.jpeg
+.webp
+.txt
+
+node_modules
+imgs
+fonts
+test
+
+
