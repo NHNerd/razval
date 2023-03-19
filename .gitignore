@@ -5,8 +5,9 @@
 .txt
 
 node_modules
-imgs
+public/imgs
+public/data
 fonts
 test
-
+trash
 

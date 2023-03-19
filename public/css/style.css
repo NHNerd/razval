@@ -1,0 +1,10 @@
+* {
+  overflow-x: hidden;
+  font-weight: initial;
+  font-size: 32px;
+  color: rgb(235, 233, 228);
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
