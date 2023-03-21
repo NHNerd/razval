@@ -16,7 +16,8 @@ app.get('/dubrovsky', (req, res) => {
 });
 
 const PORT = 3000;
+const HOST = 'localhost';
 
 app.listen(PORT, () => {
-  console.log(`Server started.\nhttp://localhost:${PORT}`);
+  console.log(`Server started.\nhttp://${HOST}:${PORT}`);
 });

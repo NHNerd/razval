@@ -1,4 +1,4 @@
-let path = '/imgs/razval/test/t-shorts-pack/';
+let path = '/imgs/razval/items/';
 
 function render(imgNum, price) {
   let img = `t-shorts-pack.${String(imgNum).padStart(3, '0')}.png`;
@@ -16,16 +16,10 @@ function render(imgNum, price) {
 }
 let price = '100';
 let imgNum = 1;
-let imgSum = 8;
+let imgSum = 18;
 for (imgNum; imgNum <= imgSum; imgNum += 1) {
   render(imgNum, price);
 }
-
-// function test(n, x) {
-
-//   let result = n * x;
-//   console.log(result);
-// }
 
 // class Card {
 //   constructor(imgPath, name, description, price) {

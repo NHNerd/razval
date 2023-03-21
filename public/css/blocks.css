@@ -1,11 +1,12 @@
 /** header */
 .bg-header {
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(11px);
-  z-index: -1;
   position: absolute;
   width: 100%;
   height: 62px;
+}
+
+.bg-header {
+  z-index: 1;
 }
 .header {
   padding-top: 12px;
@@ -13,19 +14,19 @@
   padding-right: 70px;
   display: flex;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
+  z-index: 2;
 }
-/** main */
 
+/** main */
+.container {
+  position: relative;
+  top: 110px;
+}
 /** footer */
-.footer {
+.bg-footer {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-
-  background-color: black;
-
-  height: 100px;
+  height: 60px;
 }
