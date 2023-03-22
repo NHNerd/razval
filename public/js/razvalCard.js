@@ -21,6 +21,13 @@ for (imgNum; imgNum <= imgSum; imgNum += 1) {
   render(imgNum, price);
 }
 
+//! test
+fetch('/data/razvalCards.json')
+  .then((response) => response.json())
+  .then((products) => {
+    console.log(products);
+  });
+
 // class Card {
 //   constructor(imgPath, name, description, price) {
 //     this.imgName = imgName;

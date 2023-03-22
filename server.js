@@ -4,15 +4,15 @@ app.set('view engine', 'ejs'); // Connecting modul for application
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.render('homepage'); // render - function from ejs mudul
+  res.render('homepage');
 });
 
 app.get('/razval', (req, res) => {
-  res.render('razval'); // render - function from ejs mudul
+  res.render('razval');
 });
 
 app.get('/dubrovsky', (req, res) => {
-  res.render('dubrovsky'); // render - function from ejs mudul
+  res.render('dubrovsky');
 });
 
 const PORT = 3000;
