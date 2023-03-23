@@ -19,7 +19,8 @@
 
 /** main */
 .container {
-  position: relative;
+  overflow-x: hidden;
+  width: 100%;
   top: 110px;
 }
 /** footer */
