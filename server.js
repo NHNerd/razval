@@ -11,6 +11,10 @@ app.get('/razval', (req, res) => {
   res.render('razval');
 });
 
+app.get('/razval/admin', (req, res) => {
+  res.render('admin');
+});
+
 app.get('/dubrovsky', (req, res) => {
   res.render('dubrovsky');
 });
