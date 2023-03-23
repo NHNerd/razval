@@ -1,4 +1,4 @@
-export function render(imgNum, itemName, price) {
+export function render(imgNum, itemName) {
   let path = '/imgs/razval/items/';
   let img = `t-shorts-pack.${String(imgNum).padStart(3, '0')}.png`;
   let imgPath = path + img;
@@ -7,8 +7,7 @@ export function render(imgNum, itemName, price) {
   element.innerHTML = `
       <div class="cards">
         <img src=${imgPath}>
-        <p class="cardName">${itemName}</p>
-        <p class="cardPrice">${price}$</p>
+          <p class="cardName">${itemName}</p>
       </div> 
     `;
   container.append(element);
