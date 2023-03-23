@@ -1,31 +1,14 @@
-let path = '/imgs/razval/items/';
+import { render } from './moduls/render.js';
 
-function render(imgNum, price) {
-  let img = `t-shorts-pack.${String(imgNum).padStart(3, '0')}.png`;
-  let imgPath = path + img;
-  const container = document.querySelector('.container');
-  const element = document.createElement('div');
-  element.innerHTML = `
-    <div class="cards">
-      <img src=${imgPath}>
-      <p class="cardName">t-short</p>
-      <p class="cardPrice">${price}$</p>
-    </div> 
-  `;
-  container.append(element);
-}
-let price = '100';
-let imgNum = 1;
-let imgSum = 18;
-for (imgNum; imgNum <= imgSum; imgNum += 1) {
-  render(imgNum, price);
-}
-
-//! test
 fetch('/data/razvalCards.json')
   .then((response) => response.json())
   .then((products) => {
-    console.log(products);
+    let imgNum = 0;
+    products.forEach((product) => {
+      imgNum++;
+
+      render(imgNum, product.itemName, product.price);
+    });
   });
 
 // class Card {
