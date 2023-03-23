@@ -19,9 +19,9 @@
 
 /** main */
 .container {
-  overflow-x: hidden;
   width: 100%;
-  top: 110px;
+  margin-top: 110px;
+  margin-bottom: 110px;
 }
 /** footer */
 .bg-footer {
