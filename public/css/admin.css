@@ -23,7 +23,7 @@ body {
   padding: 0 0 20px 0;
   border-bottom: 1px solid silver;
 }
-.containerLogin form {
+.containerLogin div {
   padding: 0 40px;
   box-sizing: border-box;
 }
@@ -70,7 +70,7 @@ form .txt_field {
   width: 100%;
 }
 
-input[type='submit'] {
+#login {
   margin: 30px 0;
   width: 100%;
   height: 50%;
@@ -80,7 +80,7 @@ input[type='submit'] {
   border-radius: 25px;
   font-size: 18px;
 }
-input[type='submit']:hover {
+#login:hover {
   border-color: black;
   transition: 0.3s;
 }

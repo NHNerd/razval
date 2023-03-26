@@ -12,17 +12,20 @@
     <link rel="stylesheet" href="/css/blocks.css" />
   </head>
   <body class="bg">
-    <!--* header -->
+    <!-- header -->
     <%- include('blocks/header') -%>
 
     <main>
+      <!-- popup -->
+      <div class="onnOff"></div>
+      <!-- Items cards -->
       <div class="container"></div>
       <!--* push from razvalCard.js -->
     </main>
 
-    <!--* footer -->
+    <!-- footer -->
     <%- include('blocks/footer') -%>
 
-    <script type="module" src="/js/razvalCard.js" defer></script>
+    <script type="module" src="/js/render.js" defer></script>
   </body>
 </html>

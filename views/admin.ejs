@@ -5,24 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="/css/admin.css" />
+    <!-- <link rel="stylesheet" href="/css/admin.css" /> -->
   </head>
   <body>
     <div class="containerLogin">
       <h1>Login</h1>
-      <form method="post">
-        <div class="txt_field">
-          <input type="text" required />
-          <span></span>
-          <label>Username</label>
-        </div>
-        <div class="txt_field">
-          <input type="text" required />
-          <span></span>
-          <label>password</label>
-        </div>
-        <input type="submit" value="Login" />
-      </form>
+      <!-- <form method="get"> -->
+      <div class="txt_field">
+        <input id="username" type="text" required />
+        <span></span>
+        <label>Username</label>
+      </div>
+      <div class="txt_field">
+        <input id="password" type="text" required />
+        <span></span>
+        <label>password</label>
+      </div>
+      <button class="login">login</button>
+      <!-- </form> -->
     </div>
+    <script src="/js/getLogin.js"></script>
   </body>
 </html>

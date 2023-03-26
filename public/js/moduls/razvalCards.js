@@ -6,7 +6,7 @@ export function render(imgNum, itemName) {
   const element = document.createElement('div');
   element.innerHTML = `
       <div class="cards">
-        <img src=${imgPath}>
+        <img class="openPopup "src=${imgPath}>
           <p class="cardName">${itemName}</p>
       </div> 
     `;

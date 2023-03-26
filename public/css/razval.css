@@ -45,3 +45,91 @@ img {
     drop-shadow(0px 0px 16px rgb(255, 255, 255))
     drop-shadow(0px 0px 24px rgb(255, 255, 255));
 }
+
+/** Popup */
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  top: 0;
+  left: 0;
+}
+.popupContainer {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 85%;
+  height: 80vh;
+
+  background-color: black;
+  border-radius: 6px;
+  border: 2px solid silver;
+
+  z-index: 5;
+}
+.popupClose {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+.poupImg {
+  position: relative;
+  width: 40%;
+  top: 50%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+}
+
+.poupImg {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+}
+
+.popupArray {
+  position: absolute;
+  width: 35%;
+  height: 65vh;
+
+  top: 50%;
+  left: 77%;
+  transform: translate(-50%, -50%);
+}
+
+.popupName {
+  font-size: calc((1rem + 3vw) * 0.7);
+  position: relative;
+  text-align: center;
+}
+.popupPrice {
+  font-size: calc((1rem + 3vw) * 0.3);
+  text-align: center;
+  color: brown;
+}
+.popupDiscription {
+  font-size: calc((1rem + 3vw) * 0.27);
+  padding: 5% 0 5% 0%;
+}
+.popupSize {
+  font-size: calc((1rem + 3vw) * 0.35);
+  text-align: center;
+}
+.popupCart {
+  font-size: calc((1rem + 3vw) * 0.3);
+  color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5% 0 2.5% 0%;
+  margin: 0 33% 0 33%;
+  border-radius: 8px;
+}
