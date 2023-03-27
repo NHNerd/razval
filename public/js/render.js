@@ -1,32 +1,27 @@
 import { render } from './moduls/razvalCards.js';
-import { popupAdd, popupClose } from './moduls/popup.js';
+import { popupOpen, popupClose } from './moduls/popup.js';
 
-// Render items rards
 fetch('/data/razvalCards.json')
   .then((response) => response.json())
   .then((products) => {
-    let imgNum = 0;
     products.forEach((product) => {
-      imgNum++;
+      // Render items rards
+      render(product);
 
-      render(imgNum, product.itemName, product.price);
+      // Render modal window
+      //* window.onload - The code inside the functions is not executed until all other elements of the page have been loaded.
+      window.onload = function () {
+        const openPopups = document.querySelectorAll('.openPopup');
+        openPopups.forEach((openPopup) => {
+          openPopup.addEventListener('click', () => {
+            const productData = JSON.parse(openPopup.dataset.product);
+            popupOpen(productData);
+            popupClose();
+          });
+        });
+      };
     });
   });
-
-// Render modal window
-
-//* window.onload - The code inside the functions is not executed until all other elements of the page have been loaded.
-window.onload = function () {
-  const openPopup = document.querySelector('.openPopup');
-  openPopup.addEventListener('click', () => {
-    popupAdd();
-    popupClose();
-  });
-};
-
-// document.getElementById('restartBtn').onclick = function () {
-//   console.log(1111111111111);
-// };
 
 // class Card {
 //   constructor(imgPath, name, description, price) {

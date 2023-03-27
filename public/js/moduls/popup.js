@@ -1,28 +1,27 @@
-export function popupAdd() {
-  const onnOff = document.querySelector('.onnOff');
-  const element = document.createElement('div');
-  element.innerHTML = `
-  <div class="popup popupClose"></div>
-  <div class="popupContainer">
-    <a href="#" class="popupClose">X</a>
-    <img class="poupImg" src="/imgs/razval/items/t-shorts-pack.001.png" />
-    <div class="popupArray">
-      <div class="popupName">Manager of Razval</div>
-      <div class="popupPrice">100$</div>
-      <div class="popupDiscription">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-        perspiciatis quas velit saepe iste vero impedit porro, facere
-        tenetur placeat deserunt repudiandae nam dolor, consectetur eius
-        ullam quisquam? Dolor tempore inventore nobis beatae totam
-        nesciunt? Omnis, quod amet quo, minus nesciunt velit aperiam ab
-        magnam distinctio reiciendis, unde maxime!
+export function popupOpen(product, imgNum) {
+  // let path = '/imgs/razval/items/';
+  // let img = `t-shorts-pack.${String(imgNum).padStart(3, '0')}.png`;
+  // let imgPath = path + img;
+  // console.log(imgPath);
+  const popups = document.querySelectorAll('.popup');
+  popups.forEach((popup) => {
+    const element = document.createElement('div');
+    element.innerHTML = `
+      <div class="popupBg popupClose"></div>
+      <div class="popupContainer">
+        <a href="#" class="popupClose">X</a>
+        <img class="poupImg" src=${product.imgPath} />
+        <div class="popupArray">
+          <div class="popupName">${product.itemName}</div>
+          <div class="popupPrice">${product.price}</div>
+          <div class="popupDiscription">${product.description}</div>
+          <div class="popupSize">size: XXL</div>
+          <button class="popupCart">add to cart</button>
+        </div>
       </div>
-      <div class="popupSize">size: XXL</div>
-      <button class="popupCart">add to cart</button>
-    </div>
-  </div>
-  `;
-  onnOff.append(element);
+    `;
+    popup.append(element);
+  });
 }
 
 export function popupClose() {
@@ -32,9 +31,9 @@ export function popupClose() {
   popupCloses.forEach((popupClose) => {
     popupClose.addEventListener('click', () => {
       const popupContainer = document.querySelector('.popupContainer');
-      const popup = document.querySelector('.popup');
+      const popupBg = document.querySelector('.popupBg');
       popupContainer.remove();
-      popup.remove();
+      popupBg.remove();
     });
   });
 }
