@@ -3,6 +3,12 @@
   src: url('/fonts/Canterbury.ttf');
 }
 
+/* Variable declarations */
+:root {
+  --buttonAdmin-padding: 40px;
+  --borderRadius-min: 6px;
+}
+
 body {
   font-family: Canterbury;
 }
@@ -30,25 +36,73 @@ body {
   justify-content: center;
 }
 
-img {
-  width: 600px;
+.cards {
+  overflow: hidden; /** for padding for blure shadow for cardName */
+  position: relative;
+
+  margin: 8px 5px 8px 5px;
+  height: 700px;
   filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 1));
 }
 
+img {
+  width: 604px;
+  height: 604px;
+}
 .cardName {
-  position: relative;
-  top: -90px;
+  position: absolute;
+  top: 89%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
   text-align: center;
-  padding: 80px;
+  padding: 100px; /** for blure shadow */
   color: rgb(0, 0, 0);
   font-size: 36px;
-  filter: drop-shadow(0px 0px 3px rgb(255, 255, 255))
-    drop-shadow(0px 0px 9px rgb(255, 255, 255))
-    drop-shadow(0px 0px 16px rgb(255, 255, 255))
-    drop-shadow(0px 0px 24px rgb(255, 255, 255));
+  filter: drop-shadow(0px 0px 6px rgb(255, 255, 255))
+    drop-shadow(0px 0px 12px rgb(255, 255, 255))
+    drop-shadow(0px 0px 21px rgb(255, 255, 255))
+    drop-shadow(0px 0px 27px rgb(255, 255, 255));
 }
 
-/** Popup */
+/* Adminka */
+.cardsAdmin {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid black;
+  border-radius: var(--borderRadius-min);
+}
+
+.cards span {
+  position: absolute;
+  background-size: cover;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.edit {
+  background-image: url('/imgs/icons/edit.png');
+  left: var(--buttonAdmin-padding);
+  top: var(--buttonAdmin-padding);
+}
+.remove {
+  background-image: url('/imgs/icons/bin.png');
+  right: var(--buttonAdmin-padding);
+  top: var(--buttonAdmin-padding);
+}
+.moveLeft {
+  background-image: url('/imgs/icons/arrow-left.png');
+  left: var(--buttonAdmin-padding);
+  bottom: var(--buttonAdmin-padding);
+}
+.moveRight {
+  background-image: url('/imgs/icons/arrow-right.png');
+  right: var(--buttonAdmin-padding);
+  bottom: var(--buttonAdmin-padding);
+}
+
+/* Popup */
+
 .popupBg {
   position: fixed;
 
@@ -71,7 +125,7 @@ img {
   height: 80vh;
 
   background-color: black;
-  border-radius: 6px;
+  border-radius: var(--borderRadius-min);
   border: 2px solid silver;
 
   z-index: 1;
@@ -135,5 +189,5 @@ img {
   right: 0;
   padding: 2.5% 0 2.5% 0%;
   margin: 0 33% 0 33%;
-  border-radius: 8px;
+  border-radius: var(--borderRadius-min);
 }

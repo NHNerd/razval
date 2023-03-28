@@ -1,5 +1,4 @@
-/** header */
-.bg-header {
+* header .bg-header {
   position: absolute;
   width: 100%;
   height: 62px;
