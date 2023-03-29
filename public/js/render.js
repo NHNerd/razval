@@ -38,5 +38,9 @@ fetch('/data/razvalCards.json')
 
       //! add new card for ADMIN USER
       cardsAdmin();
+      const addItem = document.querySelector('.addItem');
+      addItem.addEventListener('click', () => {
+        console.log('New item is created');
+      });
     }
   });
