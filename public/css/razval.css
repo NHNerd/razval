@@ -45,7 +45,7 @@ body {
   filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 1));
 }
 
-img {
+.img {
   width: 604px;
   height: 604px;
 }
@@ -65,7 +65,7 @@ img {
     drop-shadow(0px 0px 27px rgb(255, 255, 255));
 }
 
-/* Adminka */
+/* Adminka Start*/
 .cardsAdmin {
   background-color: rgba(255, 255, 255, 0.3);
   border: 2px solid black;
@@ -101,7 +101,15 @@ img {
   bottom: var(--buttonAdmin-padding);
 }
 
-/* Popup */
+/* addItem */
+.addItem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 256px;
+}
+/* Adminka End*/
 
 .popupBg {
   position: fixed;

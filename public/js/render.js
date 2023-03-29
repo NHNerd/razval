@@ -1,9 +1,12 @@
-import { render, cardsAdmin } from './moduls/razvalCards.js';
+import { render, renderNew, cardsAdmin } from './moduls/razvalCards.js';
 import { popupOpen, popupClose } from './moduls/popup.js';
+import { checkAdmin } from './adminka.js';
 
 fetch('/data/razvalCards.json')
   .then((response) => response.json())
   .then((products) => {
+    let iMax = products.length;
+    let i = 0;
     products.forEach((product) => {
       // Render items rards
       render(product);
@@ -21,7 +24,19 @@ fetch('/data/razvalCards.json')
         });
       };
     });
-    if (true) {
+
+    if (checkAdmin) {
+      // //! add button & style of cards for ADMIN USER
+      renderNew('imgs/icons/new-page.png');
+      // fetch('/data/razvalCardsNew.json')
+      //   .then((response) => response.json())
+      //   .then((cardsNew) => {
+      //     console.log(cardsNew);
+      //     render(cardsNew);
+      //   });
+      // render('imgs/icons/new-page.png', 't-shorts-pack.001.png', 3, 4, 5);
+
+      //! add new card for ADMIN USER
       cardsAdmin();
     }
   });
