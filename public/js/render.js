@@ -1,6 +1,6 @@
 import { render, renderNew, cardsAdmin } from './moduls/razvalCards.js';
 import { popupOpen, popupClose } from './moduls/popup.js';
-import { checkAdmin } from './adminka.js';
+import { checkAdmin, addNewItem } from './moduls/razvalCardsNew.js';
 
 fetch('/data/razvalCards.json')
   .then((response) => response.json())
@@ -40,7 +40,12 @@ fetch('/data/razvalCards.json')
       cardsAdmin();
       const addItem = document.querySelector('.addItem');
       addItem.addEventListener('click', () => {
+        // addNewItem();
+
+        addNewItem();
         console.log('New item is created');
       });
     }
   });
+
+fetch('http://localhost:3000/razval');

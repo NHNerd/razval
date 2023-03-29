@@ -1,4 +1,4 @@
-import { checkAdmin } from '../adminka.js';
+import { checkAdmin } from './razvalCardsNew.js';
 
 export function render(product, imgNum) {
   const container = document.querySelector('.container');
