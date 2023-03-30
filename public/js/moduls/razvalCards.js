@@ -17,14 +17,14 @@ export function render(product, imgNum) {
   container.append(element);
 }
 
+// New card
 export function renderNew(imgPath) {
-  let itemName = 'new';
   const container = document.querySelector('.container');
   const element = document.createElement('div');
   element.classList.add('cards', 'cardsAdmin', 'newCard'); // add class to the parent element
 
   element.innerHTML = `
-  <div class='img'>
+  <div class="img">
   <img class="addItem" src=${imgPath}>
   </div>
   `;

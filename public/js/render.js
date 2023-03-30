@@ -1,5 +1,5 @@
 import { render, renderNew, cardsAdmin } from './moduls/razvalCards.js';
-import { popupOpen, popupClose } from './moduls/popup.js';
+import { popupOpen, popupOpenNew, popupClose } from './moduls/popup.js';
 import { checkAdmin, addNewItem } from './moduls/razvalCardsNew.js';
 
 fetch('/data/razvalCards.json')
@@ -40,9 +40,8 @@ fetch('/data/razvalCards.json')
       cardsAdmin();
       const addItem = document.querySelector('.addItem');
       addItem.addEventListener('click', () => {
+        popupOpenNew();
         // addNewItem();
-
-        addNewItem();
         console.log('New item is created');
       });
     }
