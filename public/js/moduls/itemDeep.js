@@ -1,4 +1,4 @@
-function popupContainer(content, popup) {
+export function popupContainer(content, popup) {
   const element1 = document.createElement('div');
   const element2 = document.createElement('div');
   element1.classList.add('popupBg', 'popupClose'); // add class to the parent element
@@ -27,9 +27,20 @@ export function popupOpen(product) {
 
 export function popupOpenNew() {
   const content2 = `
-  <div>zzzzzzzzzzzzzzzz</div>
-  <div>zzzzzzzzzzzzzzzz</div>
-  <div>zzzzzzzzzzzzzzzz</div>
+  <div class="containerNewLeft">
+    <img class="addPhoto" src="/imgs/icons/new-page.png">
+    <p>name</p>
+    <input type="text" class="inputText name" >
+    <p>price</p>
+    <input type="text" class="inputText price" >
+    <p>size</p>
+    <input type="text" class="inputText size" >
+  </div>
+  <div class="containerNewRight">
+  <p>description</p>
+    <input type="text" class="inputText description" >
+  </div>
+  <button class="pushNewItem">Push</button>
   `;
   const popup = document.querySelector('.popup');
   popupContainer(content2, popup);

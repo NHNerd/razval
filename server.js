@@ -30,7 +30,7 @@ app.post('/razval', (req, res) => {
     let dataArray = JSON.parse(data); // parse the existing array
     dataArray.push(req.body); // push the new item into the array
     fs.writeFile(
-      'public/data/razvalCards2.json',
+      'public/data/razvalCards.json',
       JSON.stringify(dataArray),
       (error) => {
         error ? console.log(error) : null;

@@ -102,12 +102,62 @@ body {
 }
 
 /* addItem */
+
 .addItem {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 200px;
+}
+
+.containerNewLeft {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 15%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.containerNewRight {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 15%;
+  width: 50%;
+}
+
+.addPhoto {
+  position: relative;
+  background-color: aliceblue;
+  width: 128px;
+  height: 128px;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pushNewItem {
+  background: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.containerNewRight input {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.inputText {
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
 }
 /* Adminka End*/
 

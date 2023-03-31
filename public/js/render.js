@@ -1,6 +1,6 @@
-import { render, renderNew, cardsAdmin } from './moduls/razvalCards.js';
-import { popupOpen, popupOpenNew, popupClose } from './moduls/popup.js';
-import { checkAdmin, addNewItem } from './moduls/razvalCardsNew.js';
+import { render, cardsAdmin } from './moduls/razvalCards.js';
+import { popupOpen, popupOpenNew, popupClose } from './moduls/itemDeep.js';
+import { checkAdmin, renderNew, addNewItem } from './moduls/razvalCardsNew.js';
 
 fetch('/data/razvalCards.json')
   .then((response) => response.json())
@@ -28,21 +28,23 @@ fetch('/data/razvalCards.json')
     if (checkAdmin) {
       // //! add button & style of cards for ADMIN USER
       renderNew('imgs/icons/new-page.png');
-      // fetch('/data/razvalCardsNew.json')
-      //   .then((response) => response.json())
-      //   .then((cardsNew) => {
-      //     console.log(cardsNew);
-      //     render(cardsNew);
-      //   });
-      // render('imgs/icons/new-page.png', 't-shorts-pack.001.png', 3, 4, 5);
 
       //! add new card for ADMIN USER
       cardsAdmin();
       const addItem = document.querySelector('.addItem');
       addItem.addEventListener('click', () => {
         popupOpenNew();
-        // addNewItem();
-        console.log('New item is created');
+        popupClose();
+
+        const pushNew = document.querySelector('.pushNewItem');
+        pushNew.addEventListener('click', () => {
+          let inputName = document.querySelector('.name').value;
+          let inputPrice = document.querySelector('.price').value;
+          let inputSize = document.querySelector('.size').value;
+          let inputDescription = document.querySelector('.description').value;
+          console.log(inputName);
+          addNewItem(inputName, inputPrice, inputSize, inputDescription);
+        });
       });
     }
   });

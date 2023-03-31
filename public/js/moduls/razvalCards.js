@@ -17,20 +17,6 @@ export function render(product, imgNum) {
   container.append(element);
 }
 
-// New card
-export function renderNew(imgPath) {
-  const container = document.querySelector('.container');
-  const element = document.createElement('div');
-  element.classList.add('cards', 'cardsAdmin', 'newCard'); // add class to the parent element
-
-  element.innerHTML = `
-  <div class="img">
-  <img class="addItem" src=${imgPath}>
-  </div>
-  `;
-  container.append(element);
-}
-
 //! Admin
 function createButton(createElement, className) {
   const button = document.createElement(createElement);
