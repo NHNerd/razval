@@ -15,7 +15,7 @@ export function popupOpen(product) {
     <div class="popupName">${product.itemName}</div>
     <div class="popupPrice">${product.price}</div>
     <div class="popupDiscription">${product.description}</div>
-    <div class="popupSize">size: XXL</div>
+    <div class="popupSize">${product.size}</div>
     <button class="popupCart">add to cart</button>
   </div>
   `;

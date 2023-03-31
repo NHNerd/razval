@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "main": "razvalCard.js",
   "scripts": {
-    "start": "nodemone server.js"
+    "app": "nodemon app.js"
   },
   "repository": {
     "type": "git",
