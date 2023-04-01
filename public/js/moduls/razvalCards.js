@@ -1,6 +1,6 @@
 import { checkAdmin } from './razvalCardsNew.js';
 
-export function render(product, imgNum) {
+export function render(item) {
   const container = document.querySelector('.container');
   const element = document.createElement('div');
   element.classList.add('cards'); // add class to the parent element
@@ -10,9 +10,9 @@ export function render(product, imgNum) {
   }
 
   element.innerHTML = `
-  <img class="openPopup img" src=${product.imgPath}
-  data-product='${JSON.stringify(product)}'>
-  <p class="cardName">${product.itemName}</p>
+  <img class="openPopup img" src=${item.imgPath}
+  data-item='${JSON.stringify(item)}'>
+  <p class="cardName">${item.itemName}</p>
   `;
   container.append(element);
 }

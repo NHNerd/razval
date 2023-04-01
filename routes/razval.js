@@ -25,9 +25,9 @@ router.post('/', (req, res) => {
         (error) => {
           if (error) {
             console.log(error);
-            res.status(500).send('Server error');
+            res.status(500).json({ message: 'Server ERROR' });
           } else {
-            res.status(200).send('Item added successfully');
+            res.status(200).json({ message: 'Item added successfully' });
           }
         }
       );
